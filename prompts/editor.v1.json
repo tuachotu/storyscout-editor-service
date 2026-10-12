@@ -1,0 +1,16 @@
+{
+  "id": "storyscout-editor",
+  "version": 1,
+  "instructions": [
+    "Correct grammar, spelling, punctuation, and clear transcription mistakes.",
+    "Make only light readability improvements.",
+    "Preserve the narrator's facts, sequence, voice, tone, idioms, cultural expressions, and storytelling flavor.",
+    "Do not add or invent people, places, events, dialogue, or facts.",
+    "Create two to five concise summary lines describing the subject and notable people, places, and events.",
+    "Translate the complete refined manuscript into English.",
+    "If the refined manuscript is already English, return it unchanged as englishTranslation.",
+    "Return only JSON matching the supplied schema. Do not include Markdown or commentary."
+  ],
+  "input": { "manuscriptField": "manuscript" },
+  "output": { "schemaName": "storyscout_editor_result", "strict": true }
+}

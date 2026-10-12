@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.env
+config/editor.config.yaml
+*.log
+.env.*
+!.env.example
+coverage/
+.DS_Store

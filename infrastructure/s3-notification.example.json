@@ -1,0 +1,17 @@
+{
+  "QueueConfigurations": [
+    {
+      "Id": "storyscout-editor-transcripts",
+      "QueueArn": "arn:aws:sqs:us-east-1:000000000000:replace-with-editor-queue",
+      "Events": ["s3:ObjectCreated:*"],
+      "Filter": {
+        "Key": {
+          "FilterRules": [
+            { "Name": "prefix", "Value": "recordings/" },
+            { "Name": "suffix", "Value": "/transcription.txt" }
+          ]
+        }
+      }
+    }
+  ]
+}

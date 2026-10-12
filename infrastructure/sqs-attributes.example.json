@@ -1,0 +1,5 @@
+{
+  "ReceiveMessageWaitTimeSeconds": "20",
+  "VisibilityTimeout": "3600",
+  "RedrivePolicy": "{\"deadLetterTargetArn\":\"arn:aws:sqs:us-east-1:000000000000:replace-with-editor-dlq\",\"maxReceiveCount\":\"5\"}"
+}

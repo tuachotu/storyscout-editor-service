@@ -1,0 +1,26 @@
+aws:
+  region: us-east-1
+
+storage:
+  bucket: replace-with-recording-bucket
+  transcriptKeyTemplate: recordings/{participantGuid}/{recordingId}/transcription.txt
+  refinedOutputPrefixTemplate: recordings/{participantGuid}/{recordingId}/refined
+
+queue:
+  url: https://sqs.us-east-1.amazonaws.com/000000000000/replace-with-editor-queue
+  waitTimeSeconds: 20
+  visibilityTimeoutSeconds: 3600
+  startPaused: false
+
+llm:
+  provider: openai
+  model: replace-with-model-id
+  maxOutputTokens: 10000
+
+server:
+  host: 127.0.0.1
+  port: 3003
+
+editor:
+  promptFile: ../prompts/editor.v2.json
+  maxTranscriptBytes: 1000000

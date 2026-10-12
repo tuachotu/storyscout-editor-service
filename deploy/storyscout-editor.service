@@ -1,0 +1,18 @@
+[Unit]
+Description=StoryScout Editor Service
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=storyscout
+WorkingDirectory=/opt/storyscout/editor
+EnvironmentFile=/etc/storyscout/editor.env
+ExecStart=/usr/bin/node dist/main.js --config /etc/storyscout/editor.config.yaml
+Restart=on-failure
+RestartSec=5
+NoNewPrivileges=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

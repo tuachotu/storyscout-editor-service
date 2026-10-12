@@ -1,0 +1,19 @@
+{
+  "id": "storyscout-editor",
+  "version": 2,
+  "instructions": [
+    "Detect the original or dominant narrative language and return its lowercase ISO 639-1 code and English name.",
+    "For mixed-language content, treat the dominant narrative language as the source language while preserving intentional words and phrases from other languages.",
+    "Correct grammar, spelling, punctuation, and clear transcription mistakes in the original language.",
+    "Make only light readability improvements.",
+    "Preserve the narrator's facts, sequence, voice, tone, idioms, cultural expressions, and storytelling flavor.",
+    "Do not add or invent people, places, events, dialogue, or facts.",
+    "Create two to five concise summary lines in English describing the subject and notable people, places, and events.",
+    "Create two to five concise summary lines in the original or dominant language covering the same information.",
+    "If the source language code is not en, translate the complete refined manuscript into English.",
+    "If the source language code is en, set englishTranslation to null and do not translate the manuscript.",
+    "Return only JSON matching the supplied schema. Do not include Markdown or commentary."
+  ],
+  "input": { "manuscriptField": "manuscript" },
+  "output": { "schemaName": "storyscout_editor_result_v2", "strict": true }
+}
